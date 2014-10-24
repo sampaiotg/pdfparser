@@ -1,0 +1,22 @@
+{
+  "name": "pdfparser",
+  "description": "PDF parser to JSON object.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Tiago Roberti Sampaio",
+    "email": "tiagosampaio@outlook.com",
+    "url": "http://www.trsampaio.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trsampaio/pdfparser"
+  },
+  "license": "MIT",
+  "main": "./index.js",
+  "dependencies": {
+    "pdf-to-text": "0.0.6"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
