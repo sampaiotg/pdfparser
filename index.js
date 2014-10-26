@@ -30,6 +30,7 @@ Parser.prototype.pdfToText = function(pdf, cb) {
   });
 }
 
+//Use do pdfToText to split and return a row list to callback
 Parser.prototype.pdfToArray = function(pdf, cb) {
   pdfUtil.pdfToText(pdf, function(err, data) {
     if (err) throw(err);
