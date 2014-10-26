@@ -45,6 +45,7 @@ Parser.prototype.pdfToArray = function(pdf, cb) {
   });
 }
 
+//Use do pdfToArray to split and return JSON output to callback
 Parser.prototype.pdfToJSON = function(pdf, cb) {
     //if (this.header.end == null || this.header.begin == null) throw("You need to define at least an header (begin, and end)");
   this.pdfToArray(pdf, function(err, rows) {
@@ -69,7 +70,7 @@ Parser.prototype.pdfToJSON = function(pdf, cb) {
 
 module.exports = new Parser();
 
-
+//**** The idea here
 //var Machine = function Machine() {
 //    header = {'begin': null, 'end': null};
 //  //if (false === (this instanceof Machine)) {
