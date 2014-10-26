@@ -70,7 +70,8 @@ Parser.prototype.pdfToJSON = function(pdf, cb) {
 
 module.exports = new Parser();
 
-//**** The idea here
+//**** 
+//The idea here is receive an dict as input, this dict is similar to MongoDB schema, that models the desired output from parser
 //var Machine = function Machine() {
 //    header = {'begin': null, 'end': null};
 //  //if (false === (this instanceof Machine)) {
