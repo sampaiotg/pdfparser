@@ -1,7 +1,7 @@
 var /*info = require('./lib/info.js'),
   extract = require('./lib/extract-text.js'),*/
   fs = require('fs');
-
+var json2xls = require('json2xls');
 var pdfUtil = require('pdf-to-text');
 
 function multipleMatch(element, array) {    
@@ -66,6 +66,11 @@ Parser.prototype.pdfToJSON = function(pdf, cb) {
     }
     cb(null, "end of pdf");
   });
+}
+
+Parser.prototype.toXLS = function (dict, file){
+    var xls = json2xls(dict);
+    fs.writeFileSync(file, xls, 'binary');
 }
 
 module.exports = new Parser();
