@@ -14,6 +14,7 @@
   "license": "MIT",
   "main": "./index.js",
   "dependencies": {
+    "json2officexml": "0.0.5",
     "pdf-to-text": "0.0.6"
   },
   "engines": {
