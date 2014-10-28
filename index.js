@@ -69,8 +69,18 @@ Parser.prototype.pdfToJSON = function(pdf, cb) {
 }
 
 Parser.prototype.toXLS = function (dict, file){
-    var xls = json2xls(dict);
-    fs.writeFileSync(file, xls, 'binary');
+    
+    if (dict instanceof Array) {
+        console.log(">>BEGIN DICT",typeof k)
+        
+        var keys = Object.keys(dict);
+        console.log("keys",keys);
+        for (var key in dict) {
+            console.log("key:",key)
+        }
+    }
+    //var xls = json2xls(dict);
+    //fs.writeFileSync(file, xls, 'binary');
 }
 
 module.exports = new Parser();
